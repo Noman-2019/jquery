@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>    
+     //*local*//     -->
+    
+     <script src="../jquery-3.7.1.min.js"></script>
+</head>
+<body>
+    <form action="">
+        <input type="text" name=""  placeholder="enter your first name" id="p1"><br><br>
+        <input type="text" name="" id="p2" placeholder="enter your last name">
+        <button type="button" id="btn1">click here</button>
+       </form>
+    <!-- <p id="para1">hello <br> world</p> -->
+
+   
+
+    <h1></h1>
+    
+
+    <script>
+        
+
+        $(function () {
+            $("#btn1").click(function(){
+               let content= $("#p1").val();
+               let content2= $("#p2").val();
+               $("h1").text(content +"  "+ content2);
+            //    $("h").text(content);
+            //    alert(content);
+            });
+        });
+    </script>
+</body>
+</html>

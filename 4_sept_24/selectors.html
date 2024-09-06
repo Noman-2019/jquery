@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>    
+     //*local*//     -->
+    
+     <script src="../jquery-3.7.1.min.js"></script>
+</head>
+<body>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem, temporibus! Odit sed tempora dolores consequatur quaerat iste facere eligendi suscipit nisi, aspernatur molestias ipsam dolorum molestiae, quo consequuntur dignissimos quisquam?</p>
+<h1>this is the heading</h1>
+
+    <script>
+        $(document).ready(function () {
+         $("p").click(function(){
+            $(this).hide();
+            
+        });
+        $("h1").mouseover(function(){
+        $("h1").css("color","red");
+        })
+        $("h1").mouseout(function(){
+            $("h1").css("color","green");
+        })
+    })
+    </script>
+</body>
+</html>

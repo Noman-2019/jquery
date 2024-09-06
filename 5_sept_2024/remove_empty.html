@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../jquery-3.7.1.min.js"></script>
+</head>
+<body>
+       <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam animi accusamus dolor. Eum placeat aliquid incidunt neque molestiae qui reprehenderit iste ratione quam a. Expedita ratione laboriosam eaque quisquam voluptatum.</div>
+    <button type="button" id="btn1">remove</button>
+    <button type="button" id="btn2">empty</button>
+   
+
+    <script>
+    
+        $(document).ready(function () {
+            $("#btn1").click(function(){
+                $("div").remove();
+            })
+            $("#btn2").click(function(){
+                $("div").empty();
+            })
+
+        }); 
+        
+
+    </script>
+</body>
+</html>

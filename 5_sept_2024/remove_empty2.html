@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../jquery-3.7.1.min.js"></script>
+    <style>
+        .c1{
+            font-size: 26px;
+            color: brown;
+        }
+    </style>
+</head>
+<body>
+   <h1>empty/remove</h1> 
+       <div class="c1">div with class</div>
+       <div >div without class</div>
+    <button type="button" id="btn1">remove</button>
+    <button type="button" id="btn2">empty</button>
+   
+
+    <script>
+    
+        $(document).ready(function () {
+            $("#btn1").click(function(){
+                $("div").remove();
+            })
+            $("#btn2").click(function(){
+                $("div").empty();
+            })
+
+        }); 
+        
+
+    </script>
+</body>
+</html>

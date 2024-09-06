@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jquery load method _ajax</title>
+    <script src="../jquery-3.7.1.min.js"></script>
+    
+</head>
+<body>
+   <form action="">
+     <select name="" id="st">
+        <option value="">choose one</option>
+        <option value="1">Dhaka</option>
+        <option value="2">cumilla</option>
+        <option value="3">rajshahi</option>
+     </select>
+     <button type="button" id="btn1">get data</button>
+   
+    </form>
+    <div id="show"></div>
+    <script>
+    
+        $(document).ready(function () {
+           $("#btn1").click(function () {
+            let c=$("#st").val();
+            $.get("get_data.php",{id:c},function(datas,sta){
+                // alert(datas);
+
+            $("#show").html(datas);
+            })
+            
+
+            });
+        })
+    
+         
+        
+
+    </script>
+</body>
+</html>
