@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>student_entry</title>
+    <script src="../jquery-3.7.1.min.js"></script>
+</head>
+<body>
+    <form action="" id="myform" style="width: fit-content;">
+        <fieldset>
+            <legend>student_entry</legend>
+        Name:
+        <input type="text" name="name" id="nam" placeholder="enter name"><br>
+        Gender:
+        <input type="radio" name="gender" id="gen" value="male">male
+        <input type="radio" name="gender" id="gen" value="female">female <br>
+        Date of Birth: <input type="date" name="dob" id="dob"><br>
+       Email: <input type="text" name="email" id="em"><br>
+       Phone: <input type="text" name="phone" id="ph"><br>
+        Address:
+        <textarea name="address" id="add"></textarea><br>
+        <input type="button" value="SUBMIT" name="submit" id="btn1">
+
+    </fieldset>
+
+    </form>
+    <div id=stli></div>
+
+    <script>
+        $(function(){
+            get_students();
+         $("#btn1").click(function(){
+            let formdata=$("#myform").serialize();
+            console.log(formdata);
+            $.post("insert.php",{mydata:formdata},function(data,status){
+                alert(data);
+            })
+            get_students();
+         })  
+         function get_students(){
+         $.post("students.php",function(data,status){
+         $("#stli").html(data);
+        })
+    }
+})
+    
+</script>
+</body>
+</html>
